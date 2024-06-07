@@ -1,7 +1,7 @@
 {
-  "name": "android-permission-adder",
-  "displayName": "Android Permission Adder",
-  "description": "This extension helps you to add android permission to your flutter app with ease",
+  "name": "android-permissions-helper",
+  "displayName": "Android Permissions Helper",
+  "description": "A VS Code extension that simplifies the process of adding android permissions to AndroidManifest.xml file",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.90.0"
