@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://github.com/XxA7med66xX/android-permission-adder/blob/main/asset/icon.svg" />
+  <img src="https://github.com/XxA7med66xX/android-permissions-helper/blob/main/asset/icon.png" />
 </p>
 
 <br/>
