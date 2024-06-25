@@ -31,3 +31,6 @@ You must have nodejs and git installed on your os
 2- Click on the three dots in the top right corner of the Extensions view and select "Install from VSIX".
 
 3- In the file explorer window, navigate to the location of the VSIX file you obtained and select it.
+
+## Icon Credits
+The key icon in the extension icon was sourced from the [SVG repo](https://www.svgrepo.com/svg/484416/key) website.
