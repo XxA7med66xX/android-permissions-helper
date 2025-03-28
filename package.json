@@ -28,12 +28,12 @@
   },
   "scripts": {
     "vscode:prepublish": "npm run compile && npm run fetch-permissions",
-    "compile": "tsc -p ./",
+    "compile": "npx tsc -p ./",
     "fetch-permissions": "node -e \"require('./out/permissions.js').fetchPermissions()\"",
-    "watch": "tsc -watch -p ./",
+    "watch": "npx tsc -watch -p ./",
     "pretest": "npm run compile && npm run lint",
-    "lint": "eslint src --ext ts",
-    "test": "vscode-test"
+    "lint": "npx eslint src --ext ts",
+    "test": "npx vscode-test"
   },
   "devDependencies": {
     "@types/mocha": "^10.0.6",
