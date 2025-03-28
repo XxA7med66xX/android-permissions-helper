@@ -27,8 +27,9 @@
     ]
   },
   "scripts": {
-    "vscode:prepublish": "npm run compile",
+    "vscode:prepublish": "npm run compile && npm run fetch-permissions",
     "compile": "tsc -p ./",
+    "fetch-permissions": "node -e \"require('./out/permissions.js').fetchPermissions()\"",
     "watch": "tsc -watch -p ./",
     "pretest": "npm run compile && npm run lint",
     "lint": "eslint src --ext ts",
@@ -46,6 +47,7 @@
     "typescript": "^5.4.5"
   },
   "dependencies": {
-    "@vscode/vsce": "^2.27.0"
+    "@vscode/vsce": "^2.27.0",
+    "cheerio": "^1.0.0"
   }
 }

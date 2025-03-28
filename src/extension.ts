@@ -4,7 +4,7 @@ import { getPermissions } from './permissions';
 export function activate(context: vscode.ExtensionContext) {
 
 	const disposable = vscode.commands.registerCommand('Permission.add', () => {
-		showPermissionsMenu();
+		showPermissionsMenu(context.extensionPath);
 	});
 
 	const codeActionProvider = vscode.languages.registerCodeActionsProvider('xml', new XmlCodeActionProvider(), {
@@ -14,17 +14,17 @@ export function activate(context: vscode.ExtensionContext) {
 	context.subscriptions.push(disposable);
 }
 
-function showPermissionsMenu() {
+async function showPermissionsMenu(extensionPath: string) {
 
 	const quickPick = vscode.window.createQuickPick();
-	quickPick.items = getPermissions;
+	quickPick.items = await getPermissions(extensionPath);
 	quickPick.placeholder = 'Select permission to add';
 	quickPick.matchOnDetail = true;
 	quickPick.matchOnDescription = true;
 
 	quickPick.onDidChangeSelection(item => {
 
-		const selection = `<uses-permission android:name="android.permission.${item[0].label}"/>`
+		const selection = `<uses-permission android:name="android.permission.${item[0].label}"/>`;
 		const editor = vscode.window.activeTextEditor;
 
 		if (editor) {
@@ -33,7 +33,7 @@ function showPermissionsMenu() {
 			});
 		}
 
-		quickPick.dispose()
+		quickPick.dispose();
 
 	});
 
