@@ -29,6 +29,7 @@
   "scripts": {
     "vscode:prepublish": "npm run compile && npm run fetch-permissions",
     "compile": "npx tsc -p ./",
+    "build": "npx vsce package",
     "fetch-permissions": "node -e \"require('./out/permissions.js').fetchPermissions()\"",
     "watch": "npx tsc -watch -p ./",
     "pretest": "npm run compile && npm run lint",
