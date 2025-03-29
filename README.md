@@ -14,15 +14,27 @@ https://github.com/XxA7med66xX/android-permission-adder/assets/97599003/c5c599e4
 
 ## Build
 
-You must have nodejs and git installed on your os
+You must have `nodejs`, `npm` and `git` installed on your os
 
-1- Clone the repo.
+1- Clone the repo
 
-2- In the repo directory run:
+``` 
+git clone https://github.com/XxA7med66xX/android-permissions-helper.git && cd android-permissions-helper
+```
 
-``` npx vsce package ```
+2- Install dependencies
 
-3- The output will be a file with .vsix extension located in repo directory.
+```
+npm install 
+```
+
+3- Build
+
+```
+npm run build
+```
+
+The output will be a file with .vsix extension located in repo directory.
 
 ## Installation
 
