@@ -2,7 +2,7 @@
   "name": "android-permissions-helper",
   "displayName": "Android Permissions Helper",
   "description": "A VS Code extension that simplifies the process of adding android permissions to AndroidManifest.xml file",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "author": "XxA7med66xX <@XxA7med66xX>",
   "publisher": "XxA7med66xX",
   "license": "MIT",
