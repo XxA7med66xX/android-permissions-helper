@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://github.com/XxA7med66xX/android-permissions-helper/blob/main/asset/icon.png" />
+  <img src="./asset/icon.png" />
 </p>
 
 <br/>
@@ -10,7 +10,8 @@
 
 <hr />
 
-https://github.com/XxA7med66xX/android-permission-adder/assets/97599003/c5c599e4-93d0-4a5e-bb6a-f924d584fccf
+![preview](https://github.com/user-attachments/assets/6f3693b3-2e64-4add-a0a1-27d7b081e9a5)
+
 
 ## Build
 
