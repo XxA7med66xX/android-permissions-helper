@@ -47,7 +47,7 @@ async function showPermissionsMenu(extensionPath: string) {
 class XmlCodeActionProvider implements vscode.CodeActionProvider {
 	public static readonly providedCodeActionKinds = [vscode.CodeActionKind.QuickFix];
 
-	provideCodeActions(document: vscode.TextDocument, range: vscode.Range, context: vscode.CodeActionContext, token: vscode.CancellationToken): vscode.CodeAction[] {
+	provideCodeActions(document: vscode.TextDocument, range: vscode.Range): vscode.CodeAction[] {
 		const fix = new vscode.CodeAction('Add permission', vscode.CodeActionKind.QuickFix);
 		fix.command = { command: 'Permission.add', title: 'Add permission', arguments: [document.uri, range] };
 		return [fix];
