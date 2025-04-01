@@ -1,0 +1,50 @@
+name: Build
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
+    env:
+      BUILD_NAME: Android-Permissions-Helper
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: 22
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Build extension
+      run: npm run build
+      
+    - name: Extract version from package.json
+      id: version
+      run: echo "VERSION=$(node -p "require('./package.json').version")" >> $GITHUB_ENV
+      
+    - name: Upload extension
+      continue-on-error: true
+      uses: actions/upload-artifact@v4
+      with:
+         name: ${{ env.BUILD_NAME }}-${{ env.VERSION }}
+         path: ./*.vsix
+          
+    - name: Release it
+      continue-on-error: true
+      uses: softprops/action-gh-release@v2
+      with:
+        tag_name: ${{ env.VERSION }}
+        name: ${{ env.BUILD_NAME }}-${{ env.VERSION }}
+        files: ./*.vsix
+      env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
