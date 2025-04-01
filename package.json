@@ -5,11 +5,18 @@
   "version": "0.0.1",
   "author": "XxA7med66xX <@XxA7med66xX>",
   "publisher": "XxA7med66xX",
+  "license": "MIT",
   "engines": {
     "vscode": "^1.98.0"
   },
   "categories": [
+    "Snippets",
     "Other"
+  ],
+  "keywords": [
+    "android permissions",
+    "permissions snippets",
+    "xml"
   ],
   "activationEvents": ["onLanguage:xml"],
   "icon": "asset/icon.png",
